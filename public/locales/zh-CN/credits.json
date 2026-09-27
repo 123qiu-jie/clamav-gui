@@ -1,0 +1,54 @@
+{
+     "titles": "致谢",
+     "credits-data": {
+          "coreTech": {
+               "title": "核心技术",
+               "entries": [
+                    "ClamAV（杀毒引擎）",
+                    "ClamScan（按需扫描器）",
+                    "FreshClam（病毒签名更新）"
+               ]
+          },
+          "interface": {
+               "title": "界面与平台",
+               "entries": [
+                    "Tauri（桌面运行时）",
+                    "React（用户界面/用户体验）",
+                    "Rust（后端与安全）",
+                    "React Router（路由导航）",
+                    "ShadCN UI（设计系统）",
+                    "Tailwind CSS（样式）",
+                    "Specta（类型安全的 IPC）"
+               ]
+          },
+          "system": {
+               "title": "系统集成",
+               "entries": [
+                    "Windows 任务计划程序",
+                    "Windows 安全 API",
+                    "进程与信号管理",
+                    "命令行集成（ClamAV 工具）"
+               ]
+          },
+          "ecosystem": {
+               "title": "开源生态系统",
+               "entries": [
+                    "ClamAV 社区",
+                    "Tauri 社区",
+                    "Rust 生态系统",
+                    "开源贡献者"
+               ]
+          }
+     },
+     "special-thanks": {
+          "title": "特别感谢",
+          "notes": {
+               "early-test": "早期测试与反馈",
+               "bug-report-test": "关键错误报告与实际环境测试"
+          },
+          "desc": {
+               "line1": "特别感谢那些测试预发布版本并直接报告问题的用户。",
+               "line2": "以尊重用户、隐私和开源软件为原则构建。<bold>由 ArsenTech 用爱与信任打造</bold>"
+          }
+     }
+}

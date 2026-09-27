@@ -1,0 +1,22 @@
+{
+     "title": "关于 ClamAV GUI",
+     "version": "版本 {{version}}",
+     "desc": {
+          "line1": "一个极简、开源的文件扫描与威胁检测界面，让杀毒软件本身看起来更专业，并且完全像 ClamAV（一款 FOSS 命令行杀毒软件）一样工作。",
+          "line2": "使用 Tauri、React 以及现代桌面与 Web 工具构建。本软件按“原样”提供。不会收集或传输任何数据。此 GUI 使用 ClamAV 的 <code>clamscan</code> 和 <code>freshclam</code> 引擎。扫描类型是预设项，用于定义扫描哪些位置以及使用哪些限制。",
+          "line3": "ClamAV 是 Cisco Systems, Inc. 的商标。本项目是一个独立的开源 GUI，与 Cisco 无关联，也未获得 Cisco 的认可或背书。",
+          "line4": "本项目由社区驱动。你的反馈将塑造未来。"
+     },
+     "clamav-version": "ClamAV v{{engine}}，数据库版本：{{dbVersion}}",
+     "all-rights-reserved": "保留所有权利",
+     "translated-by": "",
+     "def-version": "病毒定义数据库版本",
+     "buttons": {
+          "bug-report": "报告 Bug",
+          "feature-request": "请求新功能",
+          "contribute": "参与贡献",
+          "translate": "添加你的语言"
+     },
+     "identifier": "标识符：{{value}}",
+     "tauri-version": "Tauri 版本：v{{version}}"
+}
