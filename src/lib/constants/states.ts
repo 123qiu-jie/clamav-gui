@@ -9,6 +9,7 @@ export const INITIAL_DEIVCE_INFO: IDeviceInfo = {
 export const INITIAL_VERSION_INFO: IVersion = {
      app: "0.0.0",
      tauri: "0.0.0",
+     identifier: "com.arsentech.clamav-gui",
 }
 export const GET_INITIAL_SCAN_STATE = (type: ScanType, path: string[] | null): IScanPageState => ({
      scanType: type,
