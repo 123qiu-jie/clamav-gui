@@ -81,6 +81,11 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
    - Map to frontend translations
    - Better error messages
 - [ ] Minimized Auto Start Setting ([#12](https://github.com/ArsenTech/clamav-gui/issues/12))
+  - [ ] Tray & Startup Settings
+    - [ ] Minimized Auto Start
+    - [ ] Close button behavior
+      - Exit application
+      - Minimize to tray
 - [ ] Silent Scheduled Scans Settings (Another Attempt)
 - [X] Move several states into context to reduce rerenders and improve performance
 - [ ] Investigate macOS TextToSpeech false positive
@@ -90,6 +95,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] Lazy-load some heavy components
 - [ ] Validations with **Zod** before importing
 - [ ] Investigation and a possible fix on ClamAV availability detection part
+- [ ] Improve Overview page responsiveness on smaller displays
 
 > [!NOTE]
 > v1.0.7 is complete when
@@ -119,7 +125,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] Expanded approach of the Bug fix for the issue [#11](https://github.com/ArsenTech/clamav-gui/issues/11)
    - [ ] True scan restoration (no reset of progress)
    - [ ] Better scan continuity (UI feedback)
-   - [ ] Smarter scan awareness (optional scanType in status)
+   - [ ] Smarter scan awareness (optional `scanType` in status)
 - [ ] ClamAV Initial Setup
   - [ ] Detect missing/unconfigured `freshclam.conf`
   - [ ] Provide platform-appropriate configuration defaults
@@ -139,6 +145,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] Translate new parts after running `npm run i18n:missing-keys [lang-codes]` and typing
   - 🇫🇷 French - `fr`
   - 🇵🇱 Polish - `pl`
+  - Other languages possible
 
 ### Built With
 - [![Tauri][tauri-shield]][tauri-url]
