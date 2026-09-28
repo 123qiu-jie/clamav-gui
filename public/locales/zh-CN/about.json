@@ -9,7 +9,7 @@
      },
      "clamav-version": "ClamAV v{{engine}}，数据库版本：{{dbVersion}}",
      "all-rights-reserved": "保留所有权利",
-     "translated-by": "",
+     "translated-by": "译者：123qiu-jie",
      "def-version": "病毒定义数据库版本",
      "buttons": {
           "bug-report": "报告 Bug",

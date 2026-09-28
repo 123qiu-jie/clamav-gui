@@ -5,7 +5,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
-<!-- ## [1.0.7] - Unreleased
+## [1.0.7] - Unreleased
+### Added Languages
+  - **🇨🇳 Mandarin Chinese** - Thanks [@123qiu-jie](https://github.com/123qiu-jie)!
 ### Added
 - Antivirus page contexts to reduce prop drilling and replace nested `setX={setX}` props
   - History
@@ -29,9 +31,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 [1.0.7]: https://github.com/ArsenTech/clamav-gui/releases/tag/v1.0.7 
 
---- -->
+---
 
-## [1.0.7 Beta 2] - Unreleased
+<!-- ## [1.0.7 Beta 2] - Unreleased
 ### Added
 - Identifier on the about page
 ### Improved
@@ -40,7 +42,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 [1.0.7 Beta 2]: https://github.com/ArsenTech/clamav-gui/releases/tag/v1.0.7-2
 
----
+--- -->
 
 ## [1.0.7 Beta 1] - 2026-06-08
 > [!NOTE]
