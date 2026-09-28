@@ -1,61 +1,67 @@
-import { GuiUpdaterStatus, ScanType } from "../types/enums";
-import { IDeviceInfo, IFinishScanState, IHistoryPageState, IQuarantineState, IScanPageState, ISchedulerState, IDefsUpdaterState, IUpdaterState, IVersion } from "../types/states";
+import { ScanType } from "./enums";
+import { IHistoryData, IQuarantineData, ISchedulerData, IThreatsData } from "./data"
+import { GuiUpdaterStatus } from "./enums";
+import { HistoryConfirmationState, QuarantineConfirmationState, ScanFinishConfState, ScanUIStatus, SchedulerConfState } from ".";
 
-export const INITIAL_DEIVCE_INFO: IDeviceInfo = {
-     sys_os: "",
-     sys_host: "",
-     sys_name: "",
+export interface IDeviceInfo {
+     sys_name: string;
+     sys_os: string;
+     sys_host: string;
 }
-export const INITIAL_VERSION_INFO: IVersion = {
-     app: "0.0.0",
-     tauri: "0.0.0",
-     identifier: "com.arsentech.clamav-gui",
+export interface IVersion{
+     app: string,
+     tauri: string,
+     identifier: string
 }
-export const GET_INITIAL_SCAN_STATE = (type: ScanType, path: string[] | null): IScanPageState => ({
-     scanType: type,
-     logs: [],
-     currLocation: "",
-     duration: 0,
-     scannedFiles: 0,
-     totalFiles: 0,
-     paths: path ?? [],
-     exitCode: 0,
-     errMsg: undefined,
-     threats: [],
-     status: type===ScanType.None ? "idle" : "starting",
-     isReconnected: false,
-})
-export const INITIAL_DEF_UPDATE_STATE: IDefsUpdaterState = {
-     exitMsg: null,
-     isRequired: false,
-     lastUpdated: null,
-     isUpdatingDefs: false,
+export interface IScanPageState{
+     status: ScanUIStatus
+     logs: string[],
+     threats: IThreatsData[],
+     scannedFiles: number,
+     totalFiles: number,
+     errMsg?: string,
+     exitCode: number,
+     scanType: ScanType,
+     currLocation: string,
+     duration: number,
+     paths: string[],
+     isReconnected: boolean,
 }
-export const INITIAL_FINISH_SCAN_STATE: IFinishScanState = {
-     currThreat: null,
-     popupState: ""
+export interface IDefsUpdaterState{
+     isRequired: boolean,
+     isUpdatingDefs: boolean,
+     lastUpdated: Date | null,
+     exitMsg: number | null,
 }
-export const INITIAL_HISTORY_STATE: IHistoryPageState = {
-     popupState: "",
-     showDetails: false,
-     details: null,
-     data: []
+export interface IFinishScanState{
+     currThreat: IThreatsData | null,
+     popupState: ScanFinishConfState | ""
 }
-export const INITIAL_QUARANTINE_STATE: IQuarantineState = {
-     popupState: "",
-     id: "",
-     data: [],
-     isInitializing: true
+export interface IHistoryPageState{
+     popupState: "" | HistoryConfirmationState
+     showDetails: boolean,
+     details: string | null
+     data: IHistoryData<"state">[]
 }
-export const INITIAL_SCHEDULER_STATE: ISchedulerState = {
-     popupState: "",
-     job_id: "",
-     data: []
+export interface IClearInputState{
+     date: boolean,
+     range: boolean
 }
-export const INITIAL_UPDATER_STATE: IUpdaterState = {
-     status: GuiUpdaterStatus.Checking,
-     newVersion: null,
-     patchDate: null,
-     downloaded: 0,
-     total: 0
+export interface IQuarantineState{
+     popupState: "" | QuarantineConfirmationState
+     id: string,
+     data: IQuarantineData[],
+     isInitializing: boolean
+}
+export interface ISchedulerState{
+     popupState: SchedulerConfState | ""
+     job_id: string,
+     data: ISchedulerData<"state">[]
+}
+export interface IUpdaterState{
+     status: GuiUpdaterStatus,
+     newVersion: string | null,
+     patchDate: Date | null,
+     downloaded: number,
+     total: number
 }
