@@ -126,6 +126,8 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
    - [ ] True scan restoration (no reset of progress)
    - [ ] Better scan continuity (UI feedback)
    - [ ] Smarter scan awareness (optional `scanType` in status)
+   - [ ] Return to active scan after navigation
+   - [ ] Automatic History refresh after scan completion
 - [ ] ClamAV Initial Setup
   - [ ] Detect missing/unconfigured `freshclam.conf`
   - [ ] Provide platform-appropriate configuration defaults
