@@ -36,7 +36,7 @@
       "assets/icon-variants/*.png": "icons/",
       "assets/i18n/*.json": "i18n/"
     },
-    "createUpdaterArtifacts": true,
+    "createUpdaterArtifacts": false,
     "windows": {
       "nsis": {
         "compression": "zlib",
@@ -60,3 +60,4 @@
     }
   }
 }
+
