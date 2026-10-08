@@ -96,6 +96,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] Validations with **Zod** before importing
 - [ ] Investigation and a possible fix on ClamAV availability detection part
 - [ ] Improve Overview page responsiveness on smaller displays
+- [ ] Investigate and fix About page runtime error (`trim()` on undefined)
 
 > [!NOTE]
 > v1.0.7 is complete when
