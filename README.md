@@ -24,29 +24,29 @@
 ![GitHub repo size][repo-size-shield]
 
 <details>
-     <summary>Table of Contents</summary>
-     <ol>
-          <li>
-               <a href="#about">About</a>
-               <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#other-features">Other Features</a></li>
-                    <li><a href="#built-with">Built With</a></li>
-                    <li><a href="#download">Download</a></li>
-               </ul>
-          </li>
-          <li><a href="#usage-manual">Usage Manual</a></li>
-          <li><a href="#versioning">Versioning</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-          <li>
-               <a href="#contributing">Contributing</a>
-               <ul>
-                    <li><a href="#top-contributors">Top Contributors</a></li>
-               </ul>
-          </li>
-          <li><a href="#star-history">Star History</a></li>
-          <li><a href="#license">License</a></li>
-     </ol>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about">About</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#other-features">Other Features</a></li>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#download">Download</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage-manual">Usage Manual</a></li>
+    <li><a href="#versioning">Versioning</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li>
+      <a href="#contributing">Contributing</a>
+      <ul>
+        <li><a href="#top-contributors">Top Contributors</a></li>
+      </ul>
+    </li>
+    <li><a href="#star-history">Star History</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
 </details>
 
 ## About
@@ -76,6 +76,15 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 
 ### Planned Improvements
 #### v1.0.7 (Next, Stability)
+- [X] Move several states into context to reduce rerenders and improve performance
+- [ ] Validations with **Zod** before importing
+- [ ] Make About tab appearance **tab or stay as a grid**
+- [ ] Investigate and fix About page runtime error (`trim()` on undefined)
+- [ ] Investigate macOS TextToSpeech false positive
+- [ ] Verify detection name and affected ClamAV versions
+- [ ] Determine whether exclusion should be default or optional
+- [ ] Improve Overview page responsiveness on smaller displays
+- [ ] Lazy-load some heavy components
 - [ ] Error Handling & Translation Improvements
    - Normalize backend errors
    - Map to frontend translations
@@ -87,16 +96,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
       - Exit application
       - Minimize to tray
 - [ ] Silent Scheduled Scans Settings (Another Attempt)
-- [X] Move several states into context to reduce rerenders and improve performance
-- [ ] Investigate macOS TextToSpeech false positive
-- [ ] Verify detection name and affected ClamAV versions
-- [ ] Determine whether exclusion should be default or optional
-- [ ] Make About tab appearance **tab or stay as a grid**
-- [ ] Lazy-load some heavy components
-- [ ] Validations with **Zod** before importing
 - [ ] Investigation and a possible fix on ClamAV availability detection part
-- [ ] Improve Overview page responsiveness on smaller displays
-- [ ] Investigate and fix About page runtime error (`trim()` on undefined)
 
 > [!NOTE]
 > v1.0.7 is complete when
