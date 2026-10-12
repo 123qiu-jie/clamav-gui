@@ -45,7 +45,7 @@ export default function OverviewContent(){
                     definitionStatus={definitionStatus}
                     type={settings.realTime ? Indicator.Safe : Indicator.Alert}
                />
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full p-4 gap-4">
+               <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full p-4 gap-4">
                     {QUICK_ACCESS_LINKS.map(({type,href,Icon,openDialogType},i)=>(
                          <div key={`item-${i+1}`} className="w-full p-3 shadow-sm rounded-md bg-card text-card-foreground border grow shrink-0 h-36 flex justify-center items-center gap-4 hover:border-primary hover:cursor-pointer" onClick={()=>openDialogType==="none" ? navigate(href) : openCustomScan(href,openDialogType)}>
                               <Icon className="size-12 text-primary"/>

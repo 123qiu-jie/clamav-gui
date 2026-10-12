@@ -1,10 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { DesignType, LucideIconType } from "@/lib/types";
+import { DesignType } from "@/lib/types";
+import { LucideIcon } from "lucide-react";
 
 interface Props{
-     Icon: LucideIconType,
+     Icon: LucideIcon
      title: string,
      children: React.ReactNode,
      className?: string,

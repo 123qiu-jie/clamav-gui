@@ -1,13 +1,14 @@
 import { GuiUpdaterStatus, ScanType } from "../types/enums";
-import { IDeviceInfo, IFinishScanState, IHistoryPageState, IQuarantineState, IScanPageState, ISchedulerState, IDefsUpdaterState, IUpdaterState, IVersion } from "../types/states";
+import { IDeviceInfo, IFinishScanState, IHistoryPageState, IQuarantineState, IScanPageState, ISchedulerState, IDefsUpdaterState, IUpdaterState, IAppDetails } from "../types/states";
 
 export const INITIAL_DEIVCE_INFO: IDeviceInfo = {
      sys_os: "",
      sys_host: "",
      sys_name: "",
 }
-export const INITIAL_VERSION_INFO: IVersion = {
-     app: "0.0.0",
+export const INITIAL_VERSION_INFO: IAppDetails = {
+     name: "ClamAV GUI",
+     version: "0.0.0",
      tauri: "0.0.0",
      identifier: "com.arsentech.clamav-gui",
 }

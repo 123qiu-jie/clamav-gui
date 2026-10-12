@@ -1,11 +1,13 @@
-import { LucideIconType, SchedulerType } from ".";
 import { BadgeVisibility, ScanProfile, ScanType, SidebarCollapsible } from "./enums";
 import { COLORS } from "../constants/colors";
 import { SCAN_SETTINGS } from "../constants/settings/scan-options";
 import { DateFormatType, BehaviorMode } from "./enums";
+import { THEMES } from "../constants/settings";
+import { LucideIcon } from "lucide-react";
+import { SchedulerType } from "./schemas";
 
 export type DateFormat = "dd/MM/yyyy HH:mm:ss" | "MM/dd/yyyy HH:mm:ss" | "yyyy-MM-dd HH:mm:ss"
-export type Theme = "dark" | "light" | "system";
+export type Theme = typeof THEMES[number];
 
 export type ScanOptionKeys = keyof typeof SCAN_SETTINGS;
 export type ScanProfileValues = {
@@ -19,7 +21,7 @@ export type ResolvedTheme = Exclude<Theme, "system">;
 export type Color = keyof typeof COLORS;
 export interface IThemeSettings{
      theme: {
-          Icon: LucideIconType,
+          Icon: LucideIcon,
           theme: Theme
      }[],
      color: {
@@ -58,8 +60,10 @@ export interface IBackendSettings{
      monitoringPaths: string[]
 }
 export interface ISettingsMetadata{
+     schemaVersion: 1
      name: string,
      version: string,
+     identifier: string,
      frontend: ISettings,
      backend: IBackendSettings
 }

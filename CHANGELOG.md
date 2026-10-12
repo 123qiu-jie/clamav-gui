@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
   - Quarantine
 - Additional ClamAV detection logging for debugging and troubleshooting
 - Identifier on the about page
+- Validations with **Zod** before importing settings
 ### Improved
 - Memoized shared contexts
   - Quarantine Count
@@ -24,25 +25,18 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Memoized functions inside contexts and on definitions updater state to reduce re-rendering
 - Skeleton Loaders - Change the background image to a muted color
 - **About Page** - Added Scroll approach on the info also and improved the UI
+- **Overview Page** - Fixes [#22](https://github.com/ArsenTech/clamav-gui/issues/22)
+  - **Buttons** - Made the grid even more responsive by scaling down buttons
+  - **Safety Indicator header** - Scaled down the header size and made it even more responsive
 ### Fixed
 - macOS Homebrew ClamAV detection fallback - Fixes [#16](https://github.com/ArsenTech/clamav-gui/issues/16)
   - `/opt/homebrew/bin/clamscan`
   - `/usr/local/bin/clamscan`
+- The About Runtime Typescript error - Fixes [#25](https://github.com/ArsenTech/clamav-gui/issues/25)
 
 [1.0.7]: https://github.com/ArsenTech/clamav-gui/releases/tag/v1.0.7 
 
 ---
-
-<!-- ## [1.0.7 Beta 2] - Unreleased
-### Added
-- Identifier on the about page
-### Improved
-- Skeleton Loaders - Change the background image to a muted color
-- **About Page** - Added Scroll approach on the info also and improved the UI
-
-[1.0.7 Beta 2]: https://github.com/ArsenTech/clamav-gui/releases/tag/v1.0.7-2
-
---- -->
 
 ## [1.0.7 Beta 1] - 2026-06-08
 > [!NOTE]

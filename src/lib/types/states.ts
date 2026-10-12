@@ -8,8 +8,9 @@ export interface IDeviceInfo {
      sys_os: string;
      sys_host: string;
 }
-export interface IVersion{
-     app: string,
+export interface IAppDetails{
+     name: string,
+     version: string
      tauri: string,
      identifier: string
 }
