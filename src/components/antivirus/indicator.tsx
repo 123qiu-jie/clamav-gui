@@ -30,9 +30,9 @@ export default function SafetyIndicator({type, definitionStatus}: Props){
                (type==="warning" || definitionStatus==="outdated") && "to-amber-200 dark:to-amber-900"
           )}>
                {definitionStatus==="outdated" ? (
-                    <ShieldAlert className="size-16 sm:size-24 md:size-32 lg:size-48 md:flex-1 text-amber-900 dark:text-amber-400"/>
+                    <ShieldAlert className="size-16 sm:size-24 md:size-32 lg:size-45 md:flex-1 text-amber-900 dark:text-amber-400"/>
                ) : (
-                    <Icon className={cn("size-16 sm:size-24 md:size-32 lg:size-48 md:flex-1",type==="safe" && "text-emerald-900 dark:text-emerald-400",type==="alert" && "text-red-900 dark:text-red-400",type==="warning" && "text-amber-900 dark:text-amber-400")}/>
+                    <Icon className={cn("size-16 sm:size-24 md:size-32 lg:size-45 md:flex-1",type==="safe" && "text-emerald-900 dark:text-emerald-400",type==="alert" && "text-red-900 dark:text-red-400",type==="warning" && "text-amber-900 dark:text-amber-400")}/>
                )}
                <div className="flex flex-col items-center justify-center gap-3 flex-wrap md:flex-3">
                     <h1 className={
