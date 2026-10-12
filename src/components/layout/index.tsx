@@ -96,7 +96,6 @@ export function AppLayout({children, className}: Props){
                <Toaster
                     richColors
                     position="top-right"
-                    duration={2000}
                />
           </main>
      )

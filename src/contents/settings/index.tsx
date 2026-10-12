@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, FolderSearch, FileSearch, Download, Upload } from "lucide-react";
 import { useSettings } from "@/context/settings";
 import { useTranslation } from "react-i18next";
-import { SettingsTab, ScanProfile } from "@/lib/types/enums";
+import { SettingsTab, ScanProfile, BehaviorMode, BadgeVisibility, SidebarCollapsible } from "@/lib/types/enums";
 import { store } from "@/lib/store"
 import { IBackendSettings, ISettingsMetadata, ScanProfileValues } from "@/lib/types/settings";
 import { ButtonGroup } from "@/components/ui/button-group";
@@ -22,6 +22,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { getAppDetails } from "@/data/app";
 import { DEFAULT_SETTINGS } from "@/lib/constants/settings";
 import useWindowTitle from "@/hooks/use-window-title";
+import { SettingsMetadataSchema } from "@/lib/schemas/settings";
 
 export default function SettingsContent(){
      const [searchParams] = useSearchParams();
@@ -49,8 +50,10 @@ export default function SettingsContent(){
                const backendEntries = await store.entries<ScanProfileValues|string[]>()
                const app = await getAppDetails()
                const data: ISettingsMetadata = {
+                    schemaVersion: 1,
                     name: app.name,
                     version: app.version,
+                    identifier: app.identifier,
                     frontend: settings,
                     backend: Object.fromEntries(backendEntries) as unknown as IBackendSettings
                }
@@ -79,11 +82,25 @@ export default function SettingsContent(){
                     toast.error(t("import.empty-content"));
                     return;
                }
-               const data = JSON.parse(rawData) as ISettingsMetadata;
-               setSettings(data.frontend)
+               console.log(rawData)
+               const parsed = SettingsMetadataSchema.safeParse(JSON.parse(rawData));
+               if(!parsed.success){
+                    toast.error(t("import.error"),{
+                         description: parsed.error.message
+                    });
+                    return;
+               }
+               const {frontend, backend} = parsed.data
+               setSettings({
+                    ...frontend,
+                    currScanProfile: frontend.currScanProfile as ScanProfile,
+                    behavior: frontend.behavior as BehaviorMode,
+                    badgeVisibility: frontend.badgeVisibility as BadgeVisibility,
+                    sidebarCollapsible: frontend.sidebarCollapsible as SidebarCollapsible
+               })
                const keys = await store.keys() as (keyof IBackendSettings)[]
                for(const key of keys)
-                    await setSettingsbyKey(key,data.backend[key])
+                    await setSettingsbyKey(key,backend[key])
                toast.success(t("import.success"))
           } catch (err){
                toast.error(t("import.error"),{

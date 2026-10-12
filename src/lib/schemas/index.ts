@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { DAYS_OF_THE_WEEK, INTERVALS, SCAN_ENUM } from "./constants"
+import { DAYS_OF_THE_WEEK, INTERVALS, SCAN_ENUM } from "../constants"
 import { TFunction } from "i18next"
 
 export const getSchedulerSchema = (t: TFunction<"messages">) => z.object({

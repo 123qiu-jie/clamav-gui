@@ -77,9 +77,9 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 ### Planned Improvements
 #### v1.0.7 (Next, Stability)
 - [X] Move several states into context to reduce rerenders and improve performance
-- [ ] Validations with **Zod** before importing
+- [X] Validations with **Zod** before importing
 - [ ] Make About tab appearance **tab or stay as a grid**
-- [ ] Investigate and fix About page runtime error (`trim()` on undefined)
+- [X] Investigate and fix About page runtime error (`trim()` on undefined)
 - [ ] Investigate macOS TextToSpeech false positive
 - [ ] Verify detection name and affected ClamAV versions
 - [ ] Determine whether exclusion should be default or optional

@@ -1,20 +1,20 @@
 import { QuickAccessLink, SidebarLink, ScanType } from "./enums";
-import { LucideIconType } from ".";
+import { LucideIcon } from "lucide-react";
 
 export interface IScanMenuItem{
      type: ScanType,
-     Icon: LucideIconType
+     Icon: LucideIcon
 }
 export interface IQuickAccessItem{
      type: QuickAccessLink
      href: string,
-     Icon: LucideIconType,
+     Icon: LucideIcon,
      openDialogType: "none" | "file" | "folder"
 }
 export interface ISidebarItem{
      name: SidebarLink,
      href: string,
-     Icon: LucideIconType,
+     Icon: LucideIcon,
 }
 export interface ISpecialThanksItem{
      handle: string,

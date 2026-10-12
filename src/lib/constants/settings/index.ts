@@ -2,6 +2,7 @@ import { Files, Folder, Monitor, Moon, Sun, Gauge, ChevronsLeftRightEllipsis, Sh
 import { IBackendSettings, IDateFormatSettings, ISettings, IThemeSettings, ScanOptionKeys } from "@/lib/types/settings";
 import { DateFormatType, ScanProfile, ScanOptionGroup, BehaviorMode, BadgeVisibility, SidebarCollapsible } from "@/lib/types/enums";
 
+export const THEMES = ["dark", "light", "system"] as const
 export const SCAN_OPTION_ICON: Record<ScanOptionGroup,React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>> = {
      detection: ShieldCheck,
      "file-types": Files,
