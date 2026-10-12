@@ -78,25 +78,22 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 #### v1.0.7 (Next, Stability)
 - [X] Move several states into context to reduce rerenders and improve performance
 - [X] Validations with **Zod** before importing
-- [ ] Make About tab appearance **tab or stay as a grid**
 - [X] Investigate and fix About page runtime error (`trim()` on undefined)
+- [X] Improve Overview page responsiveness on smaller displays
+- [ ] Decide whether the About page should use tabs or remain a grid
 - [ ] Investigate macOS TextToSpeech false positive
 - [ ] Verify detection name and affected ClamAV versions
+- [ ] Investigate and possibly fix ClamAV availability detection
 - [ ] Determine whether exclusion should be default or optional
-- [X] Improve Overview page responsiveness on smaller displays
 - [ ] Lazy-load some heavy components
 - [ ] Error Handling & Translation Improvements
    - Normalize backend errors
    - Map to frontend translations
    - Better error messages
-- [ ] Minimized Auto Start Setting ([#12](https://github.com/ArsenTech/clamav-gui/issues/12))
-  - [ ] Tray & Startup Settings
-    - [ ] Minimized Auto Start
-    - [ ] Close button behavior
-      - Exit application
-      - Minimize to tray
-- [ ] Silent Scheduled Scans Settings (Another Attempt)
-- [ ] Investigation and a possible fix on ClamAV availability detection part
+- [ ] Tray & Startup Settings
+  - [ ] Close button behavior
+    - [ ] Exit application
+    - [ ] Minimize to tray
 
 > [!NOTE]
 > v1.0.7 is complete when
@@ -106,6 +103,9 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] ClamAV Path Settings
 - [ ] Scheduler support for Linux and MacOS
 - [ ] Limit `helpers::scheduler::windows::get_last_run_time` only for Windows Users
+- [ ] Silent Scheduled Scans Settings (Another Attempt)
+- [ ] Tray & Startup Settings
+  - [ ] Minimized Auto Start setting ([#12](https://github.com/ArsenTech/clamav-gui/issues/12))
 #### v1.1.x (Planned, Major)
 - [ ] ClamAV Engine Updater
 - [ ] YARA Related Features
