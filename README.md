@@ -83,7 +83,7 @@ Built with Tauri, React, and modern desktop and web tools. This software is prov
 - [ ] Investigate macOS TextToSpeech false positive
 - [ ] Verify detection name and affected ClamAV versions
 - [ ] Determine whether exclusion should be default or optional
-- [ ] Improve Overview page responsiveness on smaller displays
+- [X] Improve Overview page responsiveness on smaller displays
 - [ ] Lazy-load some heavy components
 - [ ] Error Handling & Translation Improvements
    - Normalize backend errors
